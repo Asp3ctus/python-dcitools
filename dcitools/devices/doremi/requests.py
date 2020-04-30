@@ -60,6 +60,9 @@ REQUESTS = (
 
     # SPL
     M('GetSPLList', '030100'),
+    M('GetSPLInfo', '030300', [
+        E('uuid', uuid_to_bytes),
+    ]),
     M('StoreSPL', '031F00', [
         E('xml', text_to_bytes),
     ]),

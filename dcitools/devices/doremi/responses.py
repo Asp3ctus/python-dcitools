@@ -224,6 +224,12 @@ RESPONSES = (
         E('list', 8, -1, bytes_to_uuid_list),
         E('response', -1, None, bytes_to_int),
     ]),
+    M('GetSPLInfo', '030400', [
+        E('spl_uuid', 0, 16, bytes_to_uuid),
+        E('spl_title', 16, 144, bytes_to_text),
+        E('duration', 144, 148, bytes_to_int),
+        E('response', -1, None, bytes_to_int),
+    ]),
     M('StoreSPL', '032000', [
         E('response', -1, None, bytes_to_int),
     ]),
