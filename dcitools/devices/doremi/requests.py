@@ -124,6 +124,8 @@ REQUESTS = (
         E('job_id', int_to_bytes, size=64),
     ]),
 
+    # GENERAL
+    M('HeartBeat', '100100'),
 
 )
 

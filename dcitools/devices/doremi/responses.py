@@ -374,6 +374,11 @@ RESPONSES = (
         E('title', 28, -1, bytes_to_text),
         E('response', -1, None, bytes_to_int),
     ]),
+
+    # GENERAL
+    M('HeartBeat', '100200', [
+        E('response', -1, None, bytes_to_int),
+    ]),
 )
 
 sys.modules[__name__] = MessageListWrapper(sys.modules[__name__], messages=RESPONSES)
