@@ -12,7 +12,8 @@ from .message import MessageListWrapper, MessageDefinition as M, Element as E
 
 
 REQUESTS = (
-
+    # Macros
+    M('GetMacroCueList', '0A0100'),
     # CPL
     M('GetCPLList', '010100'),
     M('GetCPLInfo', '010300', [

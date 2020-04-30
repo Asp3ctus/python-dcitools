@@ -13,6 +13,13 @@ from .message import MessageListWrapper, MessageDefinition as M, ResponseElement
 
 RESPONSES = (
 
+    # Macros
+    M('GetMacroCueList', '0A0200', [
+        E('amount', 0, 4, bytes_to_int),
+        E('item_length', 4, 8, bytes_to_int),
+        E('list', 8, -1, bytes_to_uuid_list),
+        E('response', -1, None, bytes_to_int),
+    ]),
     # CPL
     M('GetCPLList', '010200', [
         E('amount', 0, 4, bytes_to_int),
