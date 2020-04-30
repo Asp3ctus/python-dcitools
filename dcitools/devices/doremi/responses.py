@@ -246,6 +246,9 @@ RESPONSES = (
     M('PauseSPL', '030E00', [  # BGI
         E('response', -1, None, bytes_to_int),
     ]),
+    M('EjectSPL', '031000', [  # BGI
+        E('response', -1, None, bytes_to_int),
+    ]),
     M('StatusSPL', '031C00', [  # BGI
         E('playblack_state', 0, 1, bytes_to_int, {0:'Error/Unknown', 1:'Stop', 2:'Play', 3:'Pause'} ),
         E('spl_id', 1, 17, bytes_to_uuid),

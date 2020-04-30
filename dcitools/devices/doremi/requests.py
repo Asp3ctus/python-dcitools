@@ -74,6 +74,7 @@ REQUESTS = (
     ]),
     M('PlaySPL', '030B00'),  # BGI
     M('PauseSPL', '030D00'),  # BGI
+    M('EjectSPL', '030F00'),  # BGI
 
     # SCHEDULE
     M('AddSchedule2', '040101', [
