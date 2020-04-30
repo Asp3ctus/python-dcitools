@@ -20,6 +20,13 @@ RESPONSES = (
         E('list', 8, -1, bytes_to_uuid_list),
         E('response', -1, None, bytes_to_int),
     ]),
+
+    M('GetMacroCueInfo', '0A0400', [
+        E('macro_uuid', 0, 16, bytes_to_uuid),
+        E('name', 16, 80, bytes_to_text),
+        E('duration', 80, 84, bytes_to_int),
+        E('response', -1, None, bytes_to_int),
+    ]),
     # CPL
     M('GetCPLList', '010200', [
         E('amount', 0, 4, bytes_to_int),
